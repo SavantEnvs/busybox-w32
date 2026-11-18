@@ -1,0 +1,9 @@
+r /etc/hostname
+r /etc/passwd
+1,3p
+f saved
+f
+w /dev/stdout
+0r /etc/hostname
+,l
+q

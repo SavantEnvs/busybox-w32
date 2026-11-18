@@ -1,0 +1,8 @@
+scale=5
+a = 3.14159 * 2
+a
+define f(x) { if (x <= 1) return (1); return (x * f(x-1)) }
+f(10)
+sqrt(2)
+2 ^ 20 % 7
+for (i = 0; i < 3; i++) { i * i }

@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: sed
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sed/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl sed -f @@ /etc/passwd
+    afl: true
+    timeout: 10

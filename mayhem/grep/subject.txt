@@ -1,0 +1,7 @@
+foo bar abc 0xdead ABBBC
+abcabc deadbeef
+foobarfoo
+
+nothing here
+The Quick brown fox
+12345 67890 foo.bar

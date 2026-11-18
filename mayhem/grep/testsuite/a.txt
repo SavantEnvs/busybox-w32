@@ -1,0 +1,5 @@
+foo bar abc 0xdead ABBBC
+abcabc deadbeef
+foobarfoo
+
+nothing here

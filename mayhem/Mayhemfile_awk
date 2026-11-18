@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: awk
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/awk/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl awk -f @@ /dev/null
+    afl: true
+    timeout: 10

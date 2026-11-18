@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: dpkg_deb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dpkg_deb/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl dpkg-deb -c @@
+    afl: true
+    timeout: 10

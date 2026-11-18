@@ -1,0 +1,13 @@
+auto tun0 ppp0
+iface ppp0 inet ppp
+	provider isp
+iface tun0 inet6 v4tunnel
+	address 2001:db8::1
+	netmask 64
+	endpoint 192.0.2.1
+	local 192.0.2.2
+iface eth2 inet bootp
+	bootfile /x
+iface eth3 inet wvdial
+	provider p
+\

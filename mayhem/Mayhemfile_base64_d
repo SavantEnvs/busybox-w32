@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: base64_d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/base64_d/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl base64 -d
+    afl: true
+    timeout: 10

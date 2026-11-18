@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: uudecode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uudecode/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl uudecode -o /dev/stdout
+    afl: true
+    timeout: 10

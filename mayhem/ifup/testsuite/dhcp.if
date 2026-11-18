@@ -1,0 +1,16 @@
+auto eth0 eth1:1 wlan0
+iface eth0 inet dhcp
+	hostname box
+	hwaddress ether 00:11:22:33:44:55
+iface eth1:1 inet static
+	address 10.0.0.2/24
+	broadcast +
+iface wlan0 inet6 static
+	address 2001:db8::2
+	netmask 64
+	gateway 2001:db8::1
+	pre-up echo pre
+	post-down echo post
+mapping eth*
+	script /bin/true
+	map one

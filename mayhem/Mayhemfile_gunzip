@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: gunzip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gunzip/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl gunzip -c
+    afl: true
+    timeout: 10

@@ -1,0 +1,12 @@
+project: savantenvs/busybox-w32
+target: diff
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/diff/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl diff -u /mayhem/mayhem/diff/ref.txt @@  # mayhem-lint: ok-image-path (ref.txt is a read-only operand)
+    afl: true
+    timeout: 10
+  - cmd: /mayhem/busybox-afl diff -b -w -B -i -d -N -U 1 /mayhem/mayhem/diff/ref.txt @@  # mayhem-lint: ok-image-path (ref.txt is a read-only operand)
+    afl: true
+    timeout: 10

@@ -1,0 +1,4 @@
+abc
+foo.*bar
+^The
+[0-9]+

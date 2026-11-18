@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: lzop_d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lzop_d/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl lzop -d -c
+    afl: true
+    timeout: 10

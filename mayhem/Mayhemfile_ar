@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: ar
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ar/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl ar t @@
+    afl: true
+    timeout: 10

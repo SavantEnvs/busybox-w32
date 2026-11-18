@@ -1,0 +1,12 @@
+project: savantenvs/busybox-w32
+target: grep
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/grep/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl grep -n -i -E -o -w -e 'ab*c|[a-f0-9]+x?|(foo|bar)+'
+    afl: true
+    timeout: 10
+  - cmd: /mayhem/busybox-afl grep -n -i -w -f @@ /mayhem/mayhem/grep/subject.txt  # mayhem-lint: ok-image-path (subject.txt is a read-only operand)
+    afl: true
+    timeout: 10

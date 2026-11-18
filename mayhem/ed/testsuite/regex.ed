@@ -1,0 +1,16 @@
+a
+foo(bar)  baz
+one two three
+\.*[x]
+.
+/two/
+s/\(o\)\(n\)/\2\1/
+$
+-1,.p
+s/[a-z]*/<&>/g
+1,$s/\./!/
+,l
+k a
+'a
+.=
+Q

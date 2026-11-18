@@ -1,0 +1,20 @@
+a
+alpha beta
+gamma delta
+epsilon
+.
+1,$s/a/A/g
+2,3p
+/eps/p
+,n
+2c
+changed
+.
+1i
+inserted
+.
+$d
+=
+z
+w /dev/null
+q

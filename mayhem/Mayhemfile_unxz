@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: unxz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/unxz/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl unxz -c
+    afl: true
+    timeout: 10

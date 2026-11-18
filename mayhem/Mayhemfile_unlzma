@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: unlzma
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/unlzma/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl unlzma -c
+    afl: true
+    timeout: 10

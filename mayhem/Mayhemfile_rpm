@@ -1,0 +1,9 @@
+project: savantenvs/busybox-w32
+target: rpm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rpm/testsuite
+cmds:
+  - cmd: /mayhem/busybox-afl rpm -qpl @@
+    afl: true
+    timeout: 10

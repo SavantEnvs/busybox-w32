@@ -1,0 +1,11 @@
+alpha
+beta
+GAMMA
+delta
+epsilon
+zeta
+eta
+THETA
+extra
+iota
+kappa
